@@ -30,6 +30,7 @@ const likes = [];
     dropdownMedia(photographer);
     headerProfile(photographer);
     showLikePrice(medias, photographer.price);
+    nameContactModal();
 
     orderDropdown.onchange = ({ target: { value } }) =>
       dropdownMedia(photographer, value);
@@ -148,4 +149,9 @@ function showMedia(photographer, medias) {
     infosDiv.appendChild(likeSpan);
     mediasPhoto.appendChild(link);
   }
+}
+
+function nameContactModal() {
+  const contactTitle = document.querySelector("#contact_modal h2");
+  contactTitle.textContent += " " + photographer.name;
 }
