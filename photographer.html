@@ -17,7 +17,12 @@
   <body>
     <header>
       <a href="./index.html">
-        <img src="assets/images/logo.png" alt="Fisheye logo" class="logo" />
+        <img
+          src="assets/images/logo.png"
+          alt="Fisheye logo"
+          class="logo"
+          tabindex="0"
+        />
       </a>
     </header>
 
@@ -25,9 +30,9 @@
       <div class="photograph-header">
         <!-- infos photograph -->
         <div class="photograph-infos">
-          <h1></h1>
-          <p></p>
-          <p></p>
+          <h1 tabindex="0"></h1>
+          <p tabindex="0"></p>
+          <p tabindex="0"></p>
         </div>
 
         <!-- button contact -->
@@ -54,15 +59,22 @@
       <section id="photograph-media"></section>
 
       <!-- like and price -->
-      <div class="photograph-likeprice"><span></span><span></span></div>
+      <div class="photograph-likeprice" tabindex="0" aria-label="likes et cost">
+        <span tabindex="0"></span>
+        <span tabindex="0"></span>
+      </div>
     </main>
 
     <!-- modal contact me -->
     <div id="contact_modal">
       <div class="modal_contact">
         <header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h2 tabindex="0">Contactez-moi</h2>
+          <img
+            src="assets/icons/close.svg"
+            onclick="closeModal()"
+            tabindex="0"
+          />
         </header>
         <form onsubmit="sendData(event)">
           <div>
@@ -75,12 +87,54 @@
             <label for="textarea">Message</label>
             <textarea id="textarea" name="textarea"></textarea>
           </div>
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button" tabindex="0">Envoyer</button>
         </form>
       </div>
     </div>
     <!-- end modal contact me -->
 
+    <div id="mediaModal" aria-label="Modal" role="dialog" aria-hidden="true">
+      <button
+        id="leftArrow"
+        tabindex="0"
+        onclick="changeMedia('left')"
+        aria-label="Previous media"
+      >
+        &lt;
+      </button>
+      <button
+        id="rightArrow"
+        tabindex="0"
+        onclick="changeMedia('right')"
+        aria-label="Next media"
+      >
+        >
+      </button>
+      <button
+        id="closeModal"
+        tabindex="0"
+        onclick="closeMediaModal()"
+        aria-label="Close modal"
+      >
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 42 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Fermez la modal</title>
+          <path
+            d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div id="Modal" tabindex="0"></div>
+    </div>
+    <!--end de media modal-->
+
+    <!-- call js files -->
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
   </body>

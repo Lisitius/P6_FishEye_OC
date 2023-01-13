@@ -230,7 +230,75 @@ form textarea {
 }
 
 .modal_contact header h2 {
-  font-size: 64px;
+  font-size: 54px;
   font-weight: normal;
   text-align: center;
+}
+
+.modal_contact header img {
+  cursor: pointer;
+}
+
+/* modal */
+#mediaModal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+}
+
+#leftArrow,
+#rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: #901c1c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#leftArrow {
+  left: 20%;
+}
+
+#rightArrow {
+  right: 20%;
+}
+
+#mediaModal > div {
+  position: absolute;
+  width: 50%;
+  height: 750px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mediaModal > div img,
+#mediaModal > div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#mediaModal > button:nth-child(3) {
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  border: none;
+  background-color: transparent;
+}
+
+#mediaModal svg path {
+  fill: #901c1c;
+}
+
+#mediaModal span {
+  color: #901c1c;
+  font-size: 20px;
 }
