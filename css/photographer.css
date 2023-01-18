@@ -302,3 +302,88 @@ form textarea {
   color: #901c1c;
   font-size: 20px;
 }
+
+/* Media queries */
+
+@media screen and (max-width: 900px) {
+  .photograph-header {
+    background-color: #fafafa;
+    height: 300px;
+    margin: 0 50px;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #photograph-media {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 75px 100px;
+    margin: 100px;
+    margin-top: 50px;
+  }
+
+  .contact_button {
+    /* font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901c1c;
+    border-radius: 5px;
+    cursor: pointer; */
+    margin: 20px 0;
+  }
+
+  .photograph-header img {
+    margin-bottom: 30px;
+  }
+
+  /* modal contact */
+  .modal_contact header h2 {
+  font-size: 20px;
+  }
+  
+  .modal_contact header img {
+    max-width: 25px;
+    max-height: 25px;
+    padding-left: 20px;
+  }
+  form label {
+    color: #312e2e;
+    font-size: 20px;
+  }
+  form input {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .modal_contact {
+    width: 50%;
+    padding: 30px;
+    height: 500px;
+  }
+
+  #leftArrow {
+    left: 10%;
+  }
+  
+  #rightArrow {
+    right: 10%;
+  }
+
+  #mediaModal > button:nth-child(3) {
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    border: none;
+    background-color: transparent;
+  }
+}
