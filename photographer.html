@@ -77,7 +77,7 @@
             tabindex="0"
           />
         </header>
-        <form onsubmit="sendData(event)">
+        <form onsubmit="formData(event)">
           <div>
             <label for="firstName">Prénom</label>
             <input id="firstName" name="firstName" />
@@ -98,7 +98,7 @@
       <button
         id="leftArrow"
         tabindex="0"
-        onclick="changeMedia('left')"
+        onclick="changeModalMedia('left')"
         aria-label="Previous media"
       >
         &lt;
@@ -106,7 +106,7 @@
       <button
         id="rightArrow"
         tabindex="0"
-        onclick="changeMedia('right')"
+        onclick="changeModalMedia('right')"
         aria-label="Next media"
       >
         &gt;

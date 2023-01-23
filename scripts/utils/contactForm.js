@@ -8,7 +8,7 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-function sendData(e) {
+function formData(e) {
   e.preventDefault();
 
   for (const element of e.target.elements) {
@@ -16,7 +16,6 @@ function sendData(e) {
       element.tagName.toLowerCase() === "input" ||
       element.tagName.toLowerCase() === "textarea"
     ) {
-      console.log(element.value);
       element.value = "";
     }
   }

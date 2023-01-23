@@ -68,7 +68,6 @@ function headerProfile(photographer) {
   tagProfile.textContent = tagline;
   img.src = `./assets/photographers/${portrait}`;
   img.alt = photographer.name;
-  console.log(img);
   //add to parents
   header.appendChild(img);
 }
@@ -137,7 +136,6 @@ function showMedia(photographer, medias) {
       const totalLikes = document.querySelector(
         ".photograph-likeprice > span:first-child"
       );
-      console.log(target);
 
       //if the media is already liked then decrement the like by 1 otherwise add 1 like
       if (target.classList.contains("liked")) {
@@ -189,7 +187,7 @@ function showMedia(photographer, medias) {
   }
 }
 
-function changeMedia(direction) {
+function changeModalMedia(direction) {
   //focus element of modal and delete span name of media
   const media = lightbox.children[lightbox.children.length - 1].children[0];
   lightbox.children[lightbox.children.length - 1].children[1].remove();
@@ -254,13 +252,13 @@ function pressKey() {
   addEventListener("keydown", (e) => {
     //checks if the display property of the lightbox element is set and if it is different from "none".
     if (lightbox.style.display && lightbox.style.display !== "none") {
-      //checks if the left key is pressed if so call changeMedia("left")
+      //checks if the left key is pressed if so call changeModalMedia("left")
       if (e.code === "ArrowLeft") {
-        return changeMedia("left");
+        return changeModalMedia("left");
       }
-      //checks if the right key is pressed if so call changeMedia("right")
+      //checks if the right key is pressed if so call changeModalMedia("right")
       if (e.code === "ArrowRight") {
-        return changeMedia("right");
+        return changeModalMedia("right");
       }
       //checks if the escape key is pressed if so call closeMediaModal()
       if (e.code === "Escape") {
