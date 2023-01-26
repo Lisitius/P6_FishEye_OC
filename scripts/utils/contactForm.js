@@ -16,6 +16,7 @@ function formData(e) {
       element.tagName.toLowerCase() === "input" ||
       element.tagName.toLowerCase() === "textarea"
     ) {
+      console.log(element.value);
       element.value = "";
     }
   }

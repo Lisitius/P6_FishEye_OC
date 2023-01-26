@@ -325,16 +325,6 @@ form textarea {
   }
 
   .contact_button {
-    /* font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901c1c;
-    border-radius: 5px;
-    cursor: pointer; */
     margin: 20px 0;
   }
 
@@ -386,4 +376,11 @@ form textarea {
     border: none;
     background-color: transparent;
   }
+}
+
+.like {
+  margin: 0;
+  cursor: pointer;
+  color: #901C1C;
+  font-size: 20px;
 }

@@ -129,10 +129,14 @@ function showMedia(photographer, medias) {
     typeMedia.alt = media.title;
     typeMedia.controls = false;
     typeMedia.autoplay = false;
+
     nameSpan.textContent = media.title;
-    likeSpan.textContent = media.likes + " ♥";
+
+    const likeButton = document.createElement("p");
+    likeButton.textContent = media.likes + " ♥";
+    likeButton.classList.add("like");
     //create event for click et increment the number of like
-    likeSpan.onclick = ({ target }) => {
+    likeButton.onclick = ({ target }) => {
       const totalLikes = document.querySelector(
         ".photograph-likeprice > span:first-child"
       );
@@ -159,7 +163,7 @@ function showMedia(photographer, medias) {
     link.onclick = (e) => {
       e.preventDefault();
 
-      if (e.target.classList.contains("liked")) return;
+      if (e.target.classList.contains("like")) return;
       //select last element of modal (empty div) and copy cloned photo (onclick)
       lightbox.children[lightbox.children.length - 1].appendChild(
         typeMedia.cloneNode()
@@ -184,6 +188,7 @@ function showMedia(photographer, medias) {
     infosDiv.appendChild(nameSpan);
     infosDiv.appendChild(likeSpan);
     mediasPhoto.appendChild(link);
+    likeSpan.appendChild(likeButton)
   }
 }
 
